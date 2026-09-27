@@ -193,7 +193,7 @@ serial-killers-dataset/
 
 ## 🔄 Updates
 
-This dataset was extracted from Wikipedia on **January 2025**. Wikipedia is continuously updated. To refresh:
+This dataset was extracted from Wikipedia on **August 2026**. Wikipedia is continuously updated. To refresh:
 
 1. Re-run extraction scripts (included in repo)
 2. Check for new/updated Wikipedia articles
