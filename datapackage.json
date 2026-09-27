@@ -1,0 +1,103 @@
+{
+  "name": "serial-killers-dataset",
+  "title": "Serial Killers Dataset - Wikipedia Comprehensive Profiles",
+  "description": "A structured dataset of 494 serial killers from Wikipedia's 'List of serial killers by number of victims' with detailed profiles including victim counts, timelines, geographic data, personal information, criminal justice outcomes, and behavioral profiles.",
+  "version": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/anurag-panda-dev/serial-killers-dataset",
+  "sources": [
+    {
+      "title": "Wikipedia: List of serial killers by number of victims",
+      "path": "https://en.wikipedia.org/wiki/List_of_serial_killers_by_number_of_victims",
+      "license": "CC-BY-SA-4.0"
+    }
+  ],
+  "keywords": [
+    "serial killers",
+    "criminology",
+    "true crime",
+    "victimology",
+    "criminal justice",
+    "forensic psychology",
+    "wikipedia",
+    "historical data"
+  ],
+  "resources": [
+    {
+      "name": "serial_killers_dataset",
+      "path": "serial_killers_dataset.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "description": "Full structured dataset with all extracted fields including nested sections, infobox data, and metadata",
+      "schema": {
+        "fields": [
+          {"name": "name", "type": "string", "description": "Primary name of the serial killer"},
+          {"name": "wikipedia_url", "type": "string", "format": "uri", "description": "Direct link to Wikipedia article"},
+          {"name": "summary", "type": "string", "description": "First few paragraphs of Wikipedia article"},
+          {"name": "infobox", "type": "object", "description": "Complete infobox data as key-value pairs"},
+          {"name": "sections", "type": "object", "description": "All article sections as section_name: content"},
+          {"name": "victims", "type": "object", "description": "Victim counts (proven, possible, confessed) and details"},
+          {"name": "timeline", "type": "object", "description": "Active years and time span"},
+          {"name": "location", "type": "object", "description": "Countries, regions, and cities of operation"},
+          {"name": "personal_info", "type": "object", "description": "Birth, death, occupation, family, criminal status"},
+          {"name": "modus_operandi", "type": "string", "description": "Killing methods and behavioral patterns"},
+          {"name": "categories", "type": "array", "items": {"type": "string"}, "description": "Wikipedia article categories"},
+          {"name": "extracted_at", "type": "string", "format": "date-time", "description": "Extraction timestamp"}
+        ]
+      }
+    },
+    {
+      "name": "serial_killers_dataset_csv",
+      "path": "serial_killers_dataset.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Flattened tabular version with 33 key fields as columns for easy analysis in Excel/R/Python",
+      "schema": {
+        "fields": [
+          {"name": "name", "type": "string"},
+          {"name": "victims_proven", "type": "integer"},
+          {"name": "victims_possible", "type": "integer"},
+          {"name": "victims_confessed", "type": "integer"},
+          {"name": "victim_count_max", "type": "integer"},
+          {"name": "victim_count_category", "type": "string", "description": "High/Medium/Low/Very Low based on max victim count"},
+          {"name": "victim_details", "type": "string"},
+          {"name": "active_start_year", "type": "integer"},
+          {"name": "active_end_year", "type": "integer"},
+          {"name": "active_span", "type": "string"},
+          {"name": "years_active", "type": "integer"},
+          {"name": "country_primary", "type": "string"},
+          {"name": "countries", "type": "string"},
+          {"name": "regions", "type": "string"},
+          {"name": "cities", "type": "string"},
+          {"name": "date_of_birth", "type": "string"},
+          {"name": "place_of_birth", "type": "string"},
+          {"name": "date_of_death", "type": "string"},
+          {"name": "place_of_death", "type": "string"},
+          {"name": "occupation", "type": "string"},
+          {"name": "criminal_status", "type": "string"},
+          {"name": "sentence", "type": "string"},
+          {"name": "modus_operandi", "type": "string"},
+          {"name": "gender", "type": "string"},
+          {"name": "operated_alone", "type": "boolean"},
+          {"name": "medical_professional", "type": "boolean"},
+          {"name": "law_enforcement", "type": "boolean"},
+          {"name": "wikipedia_categories", "type": "string"},
+          {"name": "extraction_date", "type": "string"},
+          {"name": "summary", "type": "string"},
+          {"name": "wikipedia_url", "type": "string", "format": "uri"},
+          {"name": "wikipedia_title", "type": "string"},
+          {"name": "aliases", "type": "string"}
+        ]
+      }
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Anurag Panda",
+      "role": "author",
+      "email": "anuragpanda.dev@gmail.com"
+    }
+  ],
+  "created": "2025-09-27",
+  "updated": "2025-09-27"
+}

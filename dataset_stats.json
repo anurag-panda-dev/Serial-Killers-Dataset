@@ -1,0 +1,46 @@
+{
+  "total_killers": 494,
+  "countries": {
+    "United States": 161,
+    "Russia": 21,
+    "Soviet Union": 21,
+    "South Africa": 15,
+    "China": 13,
+    "France": 13,
+    "Mexico": 9,
+    "England": 8,
+    "Japan": 8,
+    "Australia": 8,
+    "Brazil": 7,
+    "Canada": 7,
+    "Germany": 7,
+    "India": 6,
+    "United Kingdom": 6,
+    "Poland": 5,
+    "Italy": 5,
+    "Colombia": 4,
+    "Iran": 4,
+    "Indonesia": 4
+  },
+  "victim_categories": {
+    "Low (5-14)": 262,
+    "Very Low (<5)": 96,
+    "High (30+)": 76,
+    "Medium (15-29)": 60
+  },
+  "genders": {
+    "Unknown": 446,
+    "Female": 48
+  },
+  "year_range": {
+    "min": 1900,
+    "max": 2023
+  },
+  "medical_professionals": 50,
+  "law_enforcement": 27,
+  "groups_couples": 26,
+  "with_proven_victims": 414,
+  "with_possible_victims": 194,
+  "with_confessed_victims": 55,
+  "avg_victims_proven": 13.734299516908212
+}
