@@ -24,31 +24,8 @@
   ],
   "resources": [
     {
-      "name": "serial_killers_dataset",
-      "path": "serial_killers_dataset.json",
-      "format": "json",
-      "mediatype": "application/json",
-      "description": "Full structured dataset with all extracted fields including nested sections, infobox data, and metadata",
-      "schema": {
-        "fields": [
-          {"name": "name", "type": "string", "description": "Primary name of the serial killer"},
-          {"name": "wikipedia_url", "type": "string", "format": "uri", "description": "Direct link to Wikipedia article"},
-          {"name": "summary", "type": "string", "description": "First few paragraphs of Wikipedia article"},
-          {"name": "infobox", "type": "object", "description": "Complete infobox data as key-value pairs"},
-          {"name": "sections", "type": "object", "description": "All article sections as section_name: content"},
-          {"name": "victims", "type": "object", "description": "Victim counts (proven, possible, confessed) and details"},
-          {"name": "timeline", "type": "object", "description": "Active years and time span"},
-          {"name": "location", "type": "object", "description": "Countries, regions, and cities of operation"},
-          {"name": "personal_info", "type": "object", "description": "Birth, death, occupation, family, criminal status"},
-          {"name": "modus_operandi", "type": "string", "description": "Killing methods and behavioral patterns"},
-          {"name": "categories", "type": "array", "items": {"type": "string"}, "description": "Wikipedia article categories"},
-          {"name": "extracted_at", "type": "string", "format": "date-time", "description": "Extraction timestamp"}
-        ]
-      }
-    },
-    {
       "name": "serial_killers_dataset_csv",
-      "path": "serial_killers_dataset.csv",
+      "path": "00_serial_killers_dataset.csv",
       "format": "csv",
       "mediatype": "text/csv",
       "description": "Flattened tabular version with 33 key fields as columns for easy analysis in Excel/R/Python",
@@ -89,7 +66,30 @@
           {"name": "aliases", "type": "string"}
         ]
       }
-    }
+    },
+    {
+      "name": "serial_killers_dataset",
+      "path": "serial_killers_dataset.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "description": "Full structured dataset with all extracted fields including nested sections, infobox data, and metadata",
+      "schema": {
+        "fields": [
+          {"name": "name", "type": "string", "description": "Primary name of the serial killer"},
+          {"name": "wikipedia_url", "type": "string", "format": "uri", "description": "Direct link to Wikipedia article"},
+          {"name": "summary", "type": "string", "description": "First few paragraphs of Wikipedia article"},
+          {"name": "infobox", "type": "object", "description": "Complete infobox data as key-value pairs"},
+          {"name": "sections", "type": "object", "description": "All article sections as section_name: content"},
+          {"name": "victims", "type": "object", "description": "Victim counts (proven, possible, confessed) and details"},
+          {"name": "timeline", "type": "object", "description": "Active years and time span"},
+          {"name": "location", "type": "object", "description": "Countries, regions, and cities of operation"},
+          {"name": "personal_info", "type": "object", "description": "Birth, death, occupation, family, criminal status"},
+          {"name": "modus_operandi", "type": "string", "description": "Killing methods and behavioral patterns"},
+          {"name": "categories", "type": "array", "items": {"type": "string"}, "description": "Wikipedia article categories"},
+          {"name": "extracted_at", "type": "string", "format": "date-time", "description": "Extraction timestamp"}
+        ]
+      }
+    },
   ],
   "contributors": [
     {
