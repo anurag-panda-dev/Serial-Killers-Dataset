@@ -220,10 +220,10 @@ Under terms:
 ## 📬 Citation
 
 ```bibtex
-@dataset{serial_killers_2025,
+@dataset{serial_killers_2026,
   title = {Serial Killers Dataset: Comprehensive Profiles from Wikipedia},
-  author = {[Your Name]},
-  year = {2025},
+  author = {Anurag Panda},
+  year = {2026},
   source = {Wikipedia: List of serial killers by number of victims},
   url = {https://en.wikipedia.org/wiki/List_of_serial_killers_by_number_of_victims},
   license = {CC-BY-SA-4.0}
